@@ -91,3 +91,16 @@ ROBOTSTXT_OBEY = True
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
 
+from shutil import which
+
+
+SELENIUM_DRIVER_ARGUMENTS = []  # Запуск в фоновом режиме --headless=new
+
+# Добавьте Selenium middleware
+DOWNLOADER_MIDDLEWARES = {
+    'scrapy_selenium.SeleniumMiddleware': 800
+}
+#SELENIUM_DRIVER_NAME = 'chrome'
+#SELENIUM_DRIVER_EXECUTABLE_PATH = 'C:\WebDrivers\chromedriver.exe'
+# Настройка для запуска браузера в режиме без графического интерфейса
+# SELENIUM_BROWSER_EXECUTABLE_PATH = 'chrome'

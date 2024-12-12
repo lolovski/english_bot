@@ -14,3 +14,4 @@ class Word(Base):
     transcription: Mapped[Optional[str]] = mapped_column(String(128), default=None)
     link: Mapped[Optional[str]] = mapped_column(String(256), default=None)
 
+
